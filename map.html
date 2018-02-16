@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="raiblocks.png" rel="shortcut icon" type="image/x-icon" />
+	<link href="../css/freelancer.css" rel="stylesheet" type="text/css" />
+	<title class="Title">Spend RaiBlocks</title>
+</head>
+<body>
+
+<div id="map"></div>
+<script>
+function myMap() {
+var center = new google.maps.LatLng(52.438355, 10.4400);
+var mapOptions = {
+    center: center,
+    zoom: 5,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+var infoWindow = new google.maps.InfoWindow({
+	  content:"Empty"
+	});
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+		var markers = [];
+        for(var i = 0; i < myObj.length; i++)
+		{
+			var markerObj = myObj[i];
+			var myCenter = new google.maps.LatLng(markerObj['latitude'], markerObj['longitude']);
+			markers[i] = new google.maps.Marker({position: myCenter});
+			markers[i].setMap(map);
+			
+			var addListener = function (i) {
+				google.maps.event.addListener(markers[i], 'click', function(){
+					infoWindow.close();
+					infoWindow = new google.maps.InfoWindow({
+					  content:myObj[i]['name']+"<br><br>"+myObj[i]['category']
+					});
+					infoWindow.open(map, markers[i]);                 
+				});
+			}
+			addListener(i);
+		}
+    }
+};
+xmlhttp.open("GET", "databaseConnectPhysical.php", true);
+xmlhttp.send();
+}
+</script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3INZ5BSFvJLSl-eQONSY7BvvTNJGyTFo&callback=myMap"></script>
+</body>
+</html>

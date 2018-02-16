@@ -1,0 +1,8 @@
+@mixin body-font() {
+  font-family: 'Raleway';
+}
+
+@mixin heading-font() {
+  font-weight: 700;
+  font-family: 'Titillium Web';
+}
