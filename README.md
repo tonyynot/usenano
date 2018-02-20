@@ -1,4 +1,4 @@
-TwoFactorAuth.org
+useNano.co
 =================
 
 [![Build Status](https://travis-ci.org/2factorauth/twofactorauth.svg)](https://travis-ci.org/2factorauth/twofactorauth)
