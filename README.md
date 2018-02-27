@@ -1,7 +1,7 @@
 usenano.org
 =================
 
-[![Build Status](https://travis-ci.org/tonyynot/usenano.svg)](https://travis-ci.org/tonyynot/usenano)
+<!-- [![Build Status](https://travis-ci.org/tonyynot/usenano.svg)](https://travis-ci.org/tonyynot/usenano) -->
 [![License](https://img.shields.io/badge/license-mit-blue.svg?style=flat)](/LICENSE)
 [![Gitter](https://img.shields.io/badge/chat-on%20gitter-green.svg)](https://gitter.im/usenano/)
 [![Twitter](https://img.shields.io/badge/Twitter-%40usenano-blue.svg)](https://twitter.com/useNano)
