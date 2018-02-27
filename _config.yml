@@ -1,10 +1,10 @@
 permalink: pretty
 markdown: kramdown
 
-title: useNano
+title: use NANO
 author: Anthony Ramella
-description:
-    Directory of merchants 
+description: A directory of merchants accepting Nano cryptocurrency payments.
+
 url: https://usenano.org
 repo: https://github.com/tonyynot/usenano
 img: img/logo.png
