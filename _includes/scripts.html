@@ -1,4 +1,4 @@
-<!-- Bootstrap core JavaScript -->
+
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -13,32 +13,11 @@
 <!-- Custom scripts for this template -->
 <script src="js/freelancer.min.js"></script>
 
-<!-- Map -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3INZ5BSFvJLSl-eQONSY7BvvTNJGyTFo&callback=modal-map"></script>
-<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAoFVW_Zy6OcZ85T7EhBSATRRWHZ1D0fPKKh5Ukzb_K2eZuc_d8BSQ2zMi0ZcF2bIOksER-2KCPPjMqA"
-      type="text/javascript"></script>
-    <script type="text/javascript">
-    //<![CDATA[
-
-      function createMarker(point,html) {
-        var marker = new GMarker(point);
-        GEvent.addListener(marker, "click", function() {
-          marker.openInfoWindowHtml(html);
-        });
-        return marker;
-      }
-
-    function load() {
-      if (GBrowserIsCompatible()) {
-        var map = new GMap2(document.getElementById("map"));
-        map.addControl(new GLargeMapControl());
-       map.addControl(new GMapTypeControl());
-       map.setCenter(new GLatLng(44.045485, -79.350642), 13);
-       var point = new GLatLng(44.045485,-79.350642);
-       var marker = createMarker(point,'<b>Horton Tree Farm, Kennedy</b><br>15899 Kennedy Rd, Whitchurch-Stouffville, York, Ontario L3Y, Canada');
-       map.addOverlay(marker);
-       GEvent.trigger(marker, "click");
-             }
-    }
-    //]]>
-    </script> -->
+<!-- Modal -->
+<script>
+$('#add').on('shown.bs.modal', function () {
+  $('#add').focus()
+  $('.modal .modal-body').css('overflow-y', 'auto'); 
+  $('.modal .modal-body').css('max-height', $(window).height() * 0.7);
+})
+</script>
