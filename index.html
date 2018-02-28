@@ -2,175 +2,137 @@
 layout: default
 title: useNano
 ---
+<noscript>
+	<div class="ui icon error message">
+		<i class="warning sign icon"></i>
+
+		<div class="content">
+			<h1>It looks like you have JavaScript disabled!</h1>
+
+			<p>
+				Without JavaScript, this page probably won't work very well.
+				For more information, or if you would like to talk to us about this,
+				please take a look at our <a href="https://github.com/tonyynot/usenano">
+				GitHub repository</a>.
+			</p>
+		</div>
+	</div>
+</noscript>
+
 <header class="masthead text-white text-center">
-   <div class="container">
-     <!-- <img class="img-fluid mb-5 d-block mx-auto" src="img/raiblocks.png" alt=""> -->
-     <h1 class="text-uppercase mb-0">Use Nano</h1>
-     <hr class="star-light">
-     <h2 class="font-weight-light mb-0">Instant, feeless, scalable transactions.</h2>
-   </div>
- </header>
+	<div class="container">
+		<!-- <img class="img-fluid mb-5 d-block mx-auto" src="img/raiblocks.png" alt=""> -->
+		<h1 class="text-uppercase mb-0">Merchant Directory</h1>
+		<hr class="star-light">
+		<h2 class="font-weight-light mb-0">Listing of goods &amp; services that accept Nano as payments.</h2>
+	</div>
+
+	<div class="text-center mt-4">
+		<button class="btn btn-xl btn-outline-dark" data-toggle="modal" data-target="#add">
+			<i class="fa fa-plus"></i>
+			Submit a new merchant listing
+		</button>
+	</div>
+
+</header>
 <!-- Why Nano? -->
 
 
-    <!-- Search Goods & Services -->
+<!-- Search Goods & Services -->
 
-    <section class="portfolio" id="portfolio">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Merchant Search</h2>
+<section class="portfolio" id="portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+<!-- 				<div class="row">
+					<div class="col-sm-6">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add">
+							<i class="fa fa-plus"></i> Add Merchant
+						</button>
+					</div>
+					<div class="col-sm-6">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#map">
+							<i class="fa fa-globe"></i> View Map
+						</button>
+					</div>
+				</div> -->
+			</div>
+		</div>
 
-        <hr class="star-dark">
-
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p>Search for goods &amp; services that accept Nano as payments.</p>
-              <nav class="navbar search-main">
-                <form class="form-inline">
-                  <input class="form-control mr-sm-2" type="search" placeholder="i.e. guitars, coffee shops, web designers" aria-label="Search">
-                  <a class="portfolio-item mx-auto" href="#modal-search"><button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search fa-lg"></i></button></a>
-                </form>
-              </nav>
-              <div class="row text-center">
-                <div class="col-sm-12 col-md-6">
-                  <div class="text-center mt-4">
-                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-map">
-                      <i class="fa fa-globe fa-lg"></i>
-                      Merchant Map
-                    </button>
-                    <div class="portfolio-modal mfp-hide" id="modal-map">
-
-   <div class="portfolio-modal-dialog bg-white">
-
-   <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-      <i class="fa fa-3x fa-times"></i>
-   </a>
-      <div class="container text-center">
-         <div class="row">
-            <div class="col-lg-8 mx-auto">
-               
-                  <iframe
-                    width="600"
-                    height="450"
-                    frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD3INZ5BSFvJLSl-eQONSY7BvvTNJGyTFo&callback=modal-map" allowfullscreen>
-                  </iframe>
-               
-               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-               <i class="fa fa-close"></i>Close</a>
-            </div>
-         </div>
-      </div>
-   </div>
+		<!-- Directory table -->
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Merchant Name</th>
+					<th>Category</th>
+					<th>Location</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for merchants in site.data.merchants %}
+				<tr>
+					<td><a href="{{ merchants.websitelink}}">{{ merchants.name }}</a></td>
+					<td>{{ merchants.category }}</td>
+					<td>{{ merchants.country}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
 </div>
+</div>
+</section>
 
-                  </div>
-                </div>
+<!-- About Section -->
+<section class="bg-secondary text-white mb-0" id="about">
+	<div class="container">
+		<h2 class="text-center text-uppercase text-white">About</h2>
+		<hr class="star-light mb-5">
+		<div class="row">
+			<div class="col-lg-4 ml-auto">
+				<p class="lead">RaiBlocks is a global currency and should therefore be used as one. You can buy RaiBlocks at any of the exchange websites listed below.</p>
+			</div>
+			<div class="col-lg-4 mr-auto">
+				<p class="lead">Don't know what RaiBlocks is? Visit the <a class = "link" href="https://www.raiblocks.net"> Official Raiblocks Website</a> and the <a class="link" href="https://www.reddit.com/r/RaiBlocks"> RaiBlocks Subreddit</a> to learn more about the currency!</p>
+			</div>
+		</div>
+		<div class="col-sm-12 text-center">
+			<p> Want to accept RaiBlocks on your own website but don't know how? Check out <a class = "link" href=https://raipay.io/>RaiPay</a>, <a class = "link" href=https://www.getxrb.com/>GetXRB</a> and <a class = "link" href=https://brainblocks.io/>brainblocks</a>!</p>
+		</div>
+		<div class="text-center mt-4">
+			<a class="btn btn-xl btn-outline-light" href="https://nano.org/en/wallet" target="_blank">
+				<i class="fa fa-download mr-2"></i>
+				Download Nano Wallet
+			</a>
+		</div>
+	</div>
+</section>
 
-                <div class="col-sm-12 col-md-6">
-                  <div class="text-center mt-4">
-                    <a class="btn btn-lg portfolio-item mx-auto" href="#modal-add">
-                      <i class="fa fa-plus fa-lg"></i>
-                      Add Merchant
-                    </a>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- Donate section -->
+<section class="portfolio" id="donate">
+	<div class="container">
+		<h2 class="text-center text-uppercase text-secondary mb-0">Donate</h2>
 
-    <!-- About Section -->
-    <section class="bg-secondary text-white mb-0" id="about">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-white">About</h2>
-        <hr class="star-light mb-5">
-        <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p class="lead">RaiBlocks is a global currency and should therefore be used as one. You can buy RaiBlocks at any of the exchange websites listed below.</p>
-          </div>
-            <div class="col-lg-4 mr-auto">
-              <p class="lead">Don't know what RaiBlocks is? Visit the <a class = "link" href="https://www.raiblocks.net"> Official Raiblocks Website</a> and the <a class="link" href="https://www.reddit.com/r/RaiBlocks"> RaiBlocks Subreddit</a> to learn more about the currency!</p>
-            </div>
-        </div>
-        <div class="col-sm-12 text-center">
-              <p> Want to accept RaiBlocks on your own website but don't know how? Check out <a class = "link" href=https://raipay.io/>RaiPay</a>, <a class = "link" href=https://www.getxrb.com/>GetXRB</a> and <a class = "link" href=https://brainblocks.io/>brainblocks</a>!</p>
-            </div>
-        <div class="text-center mt-4">
-          <a class="btn btn-xl btn-outline-light" href="#">
-            <i class="fa fa-download mr-2"></i>
-            Download Nano Wallet
-          </a>
-        </div>
-      </div>
-    </section>
+		<hr class="star-dark">
 
-    <!-- Exchanges -->
-    <!-- Where to buy Raiblocks -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Exchanges</h2>
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<p>
+				All donations are greatly appreciated and will go towards advancing the usenano.org project through global promotion of the directory, networking merchants and customers across the world. </p>
+				<div id='doraime_embed'><a href='https://doraime.com/donate/130' id='doraime_embed_link' class='btn btn-xl btn-outline-dark'>Send Nano</a></div><script type='text/javascript' src='https://doraime.com/donate/130/embed.js'></script>
+			</div>
+			<!-- Newsletter Section -->
 
-        <hr class="star-dark">
+			<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+			<div class="scroll-to-top d-lg-none position-fixed ">
+				<a class="js-scroll-trigger d-block text-center text-white rounded" href="#mainNav">
+					<i class="fa fa-chevron-up"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
 
-        <div class="row">
-          <div class="col-md-12 text-center">
-  
-            <a target="_blank" href="https://bitflip.li/trade/XRB-BTC">BitFlip</a>
+			{% include modal-map.html %}
 
-            <a target="_blank" href="https://www.bit-z.com/trade/xrb_btc">Bit-Z</a>
-                        
-            <a target="_blank" href="https://www.rightbtc.com/#!/home">RightBTC</a>
-
-            <a target="_blank" href="https://t.me/raiblockstradebot">raiblockstradebot</a>Trade coins on Telegram, XRB/DOGE            
-          </div>
-        </div>
-      </div>
-    </div>
-      </section>
-
-
-    <!-- Donate section -->
-
-    <!-- Newsletter Section -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Stay Informed</h2>
-        <hr class="star-dark mb-5">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
-              <p>Sign up for our mailing list to receive updates on the global adoption of Nano.</p>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Email Address</label>
-                  <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <br>
-              <div id="success"></div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-to-top d-lg-none position-fixed ">
-      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
-        <i class="fa fa-chevron-up"></i>
-      </a>
-    </div>
-
-    <!-- {% include modal-search.html %} -->
-
-    {% include modal-map.html %}
-
-    {% include modal-addvendor.html %}
+			{% include modal-addvendor.html %}

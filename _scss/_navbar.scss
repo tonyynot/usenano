@@ -1,24 +1,28 @@
 // Styling for the navbar
 #mainNav {
+  background-color: #fff !important;
   @include heading-font;
   .navbar-brand {
-    color: $white;
+    color: $nanoblue;
+  }
+  img {
+    width: 7%;
   }
   .navbar-nav {
     margin-top: 1rem;
     letter-spacing: 0.0625rem;
     li.nav-item {
       a.nav-link {
-        color: $white;
+        color: $nanoblue;
         &:hover {
-          color: $primary;
+          color: $blackrock;
         }
         &:active,
         &:focus {
-          color: $white;
+          color: $nanoblue;
         }
         &.active {
-          color: $primary;
+          color: $blackrock;
         }
       }
     }
@@ -28,6 +32,7 @@
     padding: 0.8rem;
   }
 }
+
 @media(min-width:992px) {
   #mainNav {
     // padding-top: 1.5rem;
