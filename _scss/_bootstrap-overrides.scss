@@ -7,7 +7,9 @@ a {
     color: darken($primary, 10%);
   }
 }
-
+p {
+  font-size: 1.5rem;
+}
 .btn {
   border-width: 2px;
   height: 4rem;
@@ -58,7 +60,7 @@ a {
 }
 
 .btn-outline-dark {
-  background-color: $blackrock;
+  background-color: $nanoblue;
   color: #fff;
 }
 
