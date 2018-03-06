@@ -70,6 +70,11 @@ section {
     background-color: rgba(33, 37, 41, 0.5);
     line-height: 3.1rem; }
 
+tr img {
+  width: 8%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+
 #map-canvas {
   width: 500px;
   height: 300px;
@@ -249,8 +254,8 @@ form .row:first-child .floating-label-form-group {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #000034;
-  color: #fff; }
+  background-color: #fff;
+  color: #000034; }
 
 .copyright {
   background-color: #000001; }
@@ -272,7 +277,7 @@ p {
 .bg-primary {
   background-color: #4A90E2 !important; }
   .bg-primary a {
-    color: #E08829; }
+    color: #ea891f; }
 
 .bg-secondary {
   background-color: #000034 !important; }
@@ -298,8 +303,9 @@ p {
     border-color: #000001; }
 
 .btn-outline-dark {
-  background-color: #4A90E2;
-  color: #fff; }
+  background-color: #fff !important;
+  color: #000034;
+  border-color: #000034; }
 
 .form-control {
   width: 23rem !important;
