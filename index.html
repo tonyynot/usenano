@@ -19,7 +19,7 @@ title: useNano
 	</div>
 </noscript>
 
-<header class="masthead text-white text-center">
+<header class="masthead text-white text-center" id="top">
 	<div class="container"><h1>Join the Nano revolution!</h1>
 		<hr class="star-light mb-5">
 		<!-- <img class="img-fluid mb-5 d-block mx-auto" src="img/raiblocks.png" alt=""> -->
@@ -34,8 +34,6 @@ title: useNano
 	</div>
 
 </header>
-<!-- Why Nano? -->
-
 
 <!-- Search Goods & Services -->
 
@@ -61,19 +59,19 @@ title: useNano
 				{% for merchants in site.data.merchants %}
 				<tr>
 					<td> 
-					{% if merchants.logo == "" %}
-						<a href="{{ merchants.websitelink}}">{{ merchants.name }}</a>
-					{% else %}
-						 <a href="{{ merchants.websitelink}}" alt="{{ merchants.name }}"><img src="img/logos/{{ merchants.logo }}"></a>  <a href="{{ merchants.websitelink}}">{{ merchants.name }}</a>
-					 {% endif %}
-					</td>
-					<td>{{ merchants.category }}</td>
-					<td>{{ merchants.country}}</td>
-				</tr>
-				{% endfor %}
-			</tbody>
-		</table>
-	</div>
+           {% if merchants.logo == "" %}
+           <a href="{{ merchants.websitelink}}">{{ merchants.name }}</a>
+           {% else %}
+           <a href="{{ merchants.websitelink}}" alt="{{ merchants.name }}"><img src="img/logos/{{ merchants.logo }}"></a>  <a href="{{ merchants.websitelink}}">{{ merchants.name }}</a>
+           {% endif %}
+         </td>
+         <td>{{ merchants.category }}</td>
+         <td>{{ merchants.country}}</td>
+       </tr>
+       {% endfor %}
+     </tbody>
+   </table>
+ </div>
 </div>
 </div>
 </section>
@@ -105,7 +103,7 @@ title: useNano
 
 <!-- Scroll up -->
 <div class="scroll-to-top d-lg-none position-fixed ">
-	<a class="js-scroll-trigger d-block text-center text-white rounded" href="#mainNav">
+	<a class="js-scroll-trigger d-block text-center text-white rounded" href="#top">
 		<i class="fa fa-chevron-up"></i>
 	</a>
 </div>

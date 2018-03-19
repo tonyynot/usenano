@@ -303,26 +303,39 @@ p {
     border-color: #000001; }
 
 .btn-outline-dark {
-  background-color: #fff !important;
+  background-color: #fff;
   color: #000034;
   border-color: #000034; }
+  .btn-outline-dark .rounded-circle:hover {
+    color: #000034; }
 
 .form-control {
   width: 23rem !important;
   height: 4rem; }
 
 .modal-dialog {
-  height: 80% !important;
-  padding-top: 10%; }
+  height: 99% !important;
+  padding-top: 6%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow: hidden; }
 
 .modal-content {
-  height: 100% !important;
-  overflow: visible; }
+  height: 81% !important;
+  padding-top: 4%; }
 
 .modal-body {
   height: 80%;
   overflow: auto; }
 
+.lead {
+  margin-top: 1rem; }
+
 iframe {
   width: 100%;
   height: 100%; }
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 673px;
+    margin: 1.75rem auto; } }

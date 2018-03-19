@@ -60,9 +60,17 @@ p {
 }
 
 .btn-outline-dark {
-  background-color: $white !important;
+  background-color: $white;
   color: $blackrock;
-  border-color: $blackrock
+  border-color: $blackrock;
+  // &:hover {
+  //   color: $nano-orange;
+  // }
+  .rounded-circle {
+    &:hover {
+      color: $blackrock;
+    }
+  }
 }
 
 .form-control {
@@ -70,21 +78,33 @@ p {
   height: 4rem;
 }
 .modal-dialog {
-  height: 80% !important;
-  padding-top:10%;
+  height: 99% !important;
+  padding-top: 6%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .modal-content {
-  height: 100% !important;
-  overflow:visible;
+  height: 81% !important;
+  padding-top: 4%;
 }
 
 .modal-body {
   height: 80%;
   overflow: auto;
 }
+.lead {
+  margin-top: 1rem;
+}
 
 iframe {
   width: 100%;
   height: 100%;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 673px;
+    margin: 1.75rem auto;
+  }
 }
