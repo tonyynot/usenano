@@ -1,11 +1,11 @@
-// Styling for the portfolio section
-.portfolio {
+// Styling for the page section
+.page {
   margin-bottom: -15px;
-  .portfolio-item {
+  .page-item {
     position: relative;
     display: block;
     max-width: 25rem;
-    .portfolio-item-caption {
+    .page-item-caption {
       -webkit-transition: all ease 0.5s;
       -moz-transition: all ease 0.5s;
       transition: all ease 0.5s;
@@ -14,20 +14,20 @@
       &:hover {
         opacity: 1;
       }
-      .portfolio-item-caption-content {
+      .page-item-caption-content {
         font-size: 1.5rem;
       }
     }
   }
   @media (min-width: 576px) {
     margin-bottom: -30px;
-    .portfolio-item {
+    .page-item {
     }
   }
 }
 
-.portfolio-modal {
-  .portfolio-modal-dialog {
+.page-modal {
+  .page-modal-dialog {
     padding: 3rem 1rem;
     min-height: calc(100vh - 2rem);
     margin: 1rem calc(1rem - 8px);
@@ -49,7 +49,7 @@
     }
   }
   @media(min-width: 768px) {
-    .portfolio-modal-dialog {
+    .page-modal-dialog {
       min-height: 100vh;
       padding: 5rem;
       margin: 3rem calc(3rem - 8px);

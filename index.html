@@ -37,7 +37,7 @@ title: useNano
 
 <!-- Search Goods & Services -->
 
-<section class="portfolio" id="listing">
+<section class="page" id="listing">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
@@ -58,7 +58,7 @@ title: useNano
 			<tbody>
 				{% for merchants in site.data.merchants %}
 				<tr>
-					<td> 
+					<td>
            {% if merchants.logo == "" %}
            <a href="{{ merchants.websitelink}}">{{ merchants.name }}</a>
            {% else %}
