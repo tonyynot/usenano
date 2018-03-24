@@ -1,8 +1,8 @@
 _site/
+node_modules
 tmp/
 *.DS_Store
 *.swp
-.idea/
 Thumbs.db
 ehthumbs.db
 Gemfile.lock
